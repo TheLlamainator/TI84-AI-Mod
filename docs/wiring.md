@@ -18,11 +18,19 @@ The calculator's TIP and RING link lines work at up to about 5 V and are open-dr
 
 The sketch uses `TIP = D1` and `RING = D10` (`esp32/esp32.ino`).
 
+## Pictures
+
+![The built board](/img/built.png)
+
+![Schematic](/img/schematic.png)
+
+![PCB layout](/img/pcb.png)
+
 ## Files
 
 - `pcb/cheating-calc.kicad_sch`, `.kicad_pcb`: KiCad design.
 - `pcb/0.1/`: gerber and drill files, ready to send to a PCB maker.
-- `pcb/jlcpcb/`: everything to upload when ordering the board assembled from JLCPCB. **Full ordering steps: [ordering-the-pcb.md](ordering-the-pcb.md).** Upload `cheating-calc-gerbers.zip` as the gerber file, then `BOM.csv` and `CPL.csv` at the assembly step. They cover only the two SMD parts (Q1 and Q2, the MMBF170 MOSFETs, LCSC C130879). The resistors, header and XIAO module are soldered by hand. Positions are measured from the board's lower-left corner.
+- `pcb/jlcpcb/`: everything to upload when ordering the board assembled from JLCPCB. **Full ordering steps: [ordering the PCB](/ordering-the-pcb).** Upload `cheating-calc-gerbers.zip` as the gerber file, then `BOM.csv` and `CPL.csv` at the assembly step. They cover only the two SMD parts (Q1 and Q2, the MMBF170 MOSFETs, LCSC C130879). The resistors, header and XIAO module are soldered by hand. Positions are measured from the board's lower-left corner.
 - `pcb/cpl-all-parts.csv`: the placement of every part, for reference or hand assembly.
 - `pcb/schematic.png`, `pcb/pcb.png`, `pcb/built.png`: pictures.
 

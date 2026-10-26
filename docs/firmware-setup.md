@@ -1,6 +1,6 @@
 # Flashing the ESP32 and setting up the calculator
 
-You need the hardware built ([wiring.md](wiring.md)) and the server running ([server-setup.md](server-setup.md)).
+You need the hardware built ([wiring](/wiring)) and the server running ([server setup](/server-setup)).
 
 ## 1. Arduino IDE setup
 

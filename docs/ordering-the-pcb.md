@@ -1,6 +1,6 @@
 # Ordering the PCB
 
-The level-shifter board is made and assembled by **JLCPCB**. Everything you need to upload is in [`pcb/jlcpcb/`](../pcb/jlcpcb/).
+The level-shifter board is made and assembled by **JLCPCB**. Everything you need to upload is in [`pcb/jlcpcb/`](https://github.com/TheLlamainator/ti84-Ai-Mod/tree/main/pcb/jlcpcb).
 
 Order here: **[jlcpcb.com](https://jlcpcb.com/?from=UNWIJQWZMTXVHID)**
 
@@ -33,7 +33,7 @@ JLCPCB changes its website from time to time, so the menu names may differ sligh
 
 JLCPCB only places the two SMD MOSFETs. You add the rest by hand when the board arrives:
 
-- 4x through-hole pull-up resistors (R1 to R4). See the parts list in [wiring.md](wiring.md) for the value.
+- 4x through-hole pull-up resistors (R1 to R4). See the parts list in [wiring](/wiring) for the value.
 - The 4-pin header (J1) for the link cable.
 - The **XIAO ESP32S3 Sense** module (U1).
 

@@ -1,3 +1,9 @@
+---
+title: Original TI-32 documentation
+---
+
+> This is the original project's documentation, kept unchanged for reference. It describes the original TI-32, not this mod. Use the other guides for this mod.
+
 
 ---
 
@@ -13,7 +19,7 @@
    - Fill in the required information (such as WiFi credentials, Hardware Pins, etc.) as specified by your project.
 
 3. **Obtain Server IP Address**:
-   - Refer to the [Server Setup](#how-to-run-the-server) section to get the IP address of your server.
+   - Refer to the [Server Setup](#_3-running-the-server) section to get the IP address of your server.
    - Update the IP address in your `secrets.h` to match the server IP.
 
 4. **Flash the ESP32**:

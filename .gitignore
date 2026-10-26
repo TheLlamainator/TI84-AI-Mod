@@ -23,3 +23,7 @@ ArTICL-master.zip
 # OS and editor noise
 .DS_Store
 Thumbs.db
+
+# Docs site build
+docs/.vitepress/dist/
+docs/.vitepress/cache/
