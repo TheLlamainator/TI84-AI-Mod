@@ -1,4 +1,4 @@
-# ti32-mod
+# ti84-Ai-Mod
 
 A modified version of the **TI-32** calculator project: an ESP32-S3 board wired to the link port of a TI-84 graphing calculator, giving it WiFi. It adds a camera view, chat with GPT (with replies), several WiFi networks, a self-hosted server, and **wireless firmware updates**.
 
