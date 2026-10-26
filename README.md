@@ -118,6 +118,8 @@ This is a modification of the original **TI-32** project, released under the **G
 
 The calculator disassembly steps are adapted from [iFixit](https://www.ifixit.com/Guide/TI-84+Plus+Disassembly/117983) (CC BY-NC-SA). The calculator link code uses **ArTICL** by Kerm Martian (Cemetech), installed separately.
 
+AI was used in the development of this project. It helped write and revise code, scripts and documentation, and the results were tested and reviewed by the author.
+
 ## Licence
 
 GNU GPL v3. See [LICENSE](LICENSE).
