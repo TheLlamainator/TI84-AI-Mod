@@ -24,56 +24,47 @@ Based on the original TI-32 project, which is licensed under the GPL v3. See [Cr
 
 ```mermaid
 flowchart LR
-    subgraph CALC["TI-84 calculator"]
-        direction TB
-        PRG["TI32 program<br/>menus: GPT, chat, images,<br/>apps, camera, settings"]
+    CALC["<b>TI-84 calculator</b><br/>runs the TI32 program"]
+
+    subgraph MOD["Mod board"]
+        PCB["<b>Level-shifter PCB</b><br/>5 V to 3.3 V"]
+        ESP["<b>XIAO ESP32S3</b><br/>link protocol, WiFi,<br/>camera, updater"]
     end
 
-    subgraph BOARD["Mod board"]
-        direction TB
-        PCB["Level-shifter PCB<br/>5 V link lines to 3.3 V<br/>(2x MMBF170)"]
-        ESP["XIAO ESP32S3 Sense<br/>link protocol, WiFi,<br/>camera, OTA updater"]
-        PCB <--> ESP
-    end
+    SRV["<b>Your server</b> (Node.js)<br/>/gpt  /chats  /image<br/>/programs  /launcher<br/>/firmware"]
+    AI(["<b>OpenAI API</b>"])
 
-    subgraph SRV["Your server (Node.js)"]
-        direction TB
-        GPT["/gpt"]
-        CHAT["/chats"]
-        IMG["/image"]
-        PRGS["/programs"]
-        LAUNCH["/launcher<br/>calculator program"]
-        FW["/firmware<br/>password protected"]
-    end
-
-    OPENAI(["OpenAI API"])
-
-    PRG <-->|"link cable"| PCB
+    CALC <-->|"link cable"| PCB
+    PCB <--> ESP
     ESP <-->|"WiFi, HTTP"| SRV
-    GPT <-->|"HTTPS"| OPENAI
+    SRV <-->|"HTTPS"| AI
 
-
-    classDef calc fill:#e8f0fe,stroke:#4a6fd4,color:#1a2a55
-    classDef board fill:#e6f6ec,stroke:#2f9a5a,color:#12391f
-    classDef srv fill:#fff3e0,stroke:#d98a1c,color:#4a2d00
-    classDef ext fill:#f3e8fd,stroke:#8a4fd0,color:#2b1450
-    class PRG calc
+    classDef calc fill:#e8f0fe,stroke:#4a6fd4,stroke-width:2px,color:#1a2a55
+    classDef board fill:#e6f6ec,stroke:#2f9a5a,stroke-width:2px,color:#12391f
+    classDef srv fill:#fff3e0,stroke:#d98a1c,stroke-width:2px,color:#4a2d00
+    classDef ext fill:#f3e8fd,stroke:#8a4fd0,stroke-width:2px,color:#2b1450
+    class CALC calc
     class PCB,ESP board
-    class GPT,CHAT,IMG,PRGS,LAUNCH,FW srv
-    class OPENAI ext
+    class SRV srv
+    class AI ext
 ```
 
 ### Update paths
 
 ```mermaid
 flowchart TB
-    DEV["You change the code"] --> A{"What changed?"}
-    A -->|"calculator program"| LV["Replace launcher.var<br/>on the server"]
-    A -->|"ESP32 firmware"| PUB["Raise FW_VERSION and run<br/>publish-firmware.sh"]
-    LV --> U["Calculator:<br/>SETTINGS > UPDATE"]
-    PUB --> F["Calculator:<br/>SETTINGS > FIRMWARE"]
+    DEV["<b>You change something</b>"] --> Q{"What changed?"}
+    Q -->|"calculator program"| LV["Replace <code>launcher.var</code><br/>on the server"]
+    Q -->|"ESP32 firmware"| PUB["Raise <code>FW_VERSION</code>, run<br/><code>publish-firmware.sh</code>"]
+    LV --> U["On the calculator:<br/><b>SETTINGS &gt; UPDATE</b>"]
+    PUB --> F["On the calculator:<br/><b>SETTINGS &gt; FIRMWARE</b>"]
     U --> OK1(["New program on the calculator"])
-    F --> OK2(["Board downloads, flashes, restarts.<br/>Rolls back if it crashes on start-up"])
+    F --> OK2(["Board downloads, flashes and restarts.<br/>Rolls back if it crashes on start-up."])
+
+    classDef act fill:#e8f0fe,stroke:#4a6fd4,stroke-width:2px,color:#1a2a55
+    classDef done fill:#e6f6ec,stroke:#2f9a5a,stroke-width:2px,color:#12391f
+    class DEV,LV,PUB,U,F act
+    class OK1,OK2 done
 ```
 
 - The **PCB** (`pcb/`) shifts the calculator's 5 V link signals to the ESP32's 3.3 V.
