@@ -1,0 +1,9 @@
+Ref,Value,Package,PosX_from_lower_left,PosY_from_lower_left,Rot,Side,Mount
+J1,Conn_01x04,PinHeader_1x04_P2.54mm_Vertical,15.7480,2.4422,270,top,THT
+Q1,MMBF170,SOT-23,36.6245,10.9512,180,top,SMD
+Q2,MMBF170,SOT-23,36.6245,15.9042,180,top,SMD
+R1,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,42.1640,19.2062,270,top,THT
+R2,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,45.5320,19.2062,270,top,THT
+R3,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,30.4800,19.0792,270,top,THT
+R4,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,27.0510,19.0792,270,top,THT
+U1,XIAO ESP32S3 Sense,MOUDLE14P-SMD-2.54-21X17.8MM,48.9360,20.2042,270,top,Module (hand-solder)

@@ -1,0 +1,25 @@
+# Secrets: never commit these. Use the .example files instead.
+secrets.h
+.env
+.env.*
+!.env.example
+
+# Build output (it can contain your WiFi details compiled in)
+esp32/build/
+*.elf
+*.map
+*.merged.bin
+
+# Server runtime files
+server/node_modules/
+server/chat.json
+server/firmware/*
+!server/firmware/.gitkeep
+node_modules/
+
+# Third-party library: install it from its own repository
+ArTICL-master.zip
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
