@@ -1,5 +1,7 @@
 # Server setup
 
+> **Files to download:** [server files](/downloads#_3-the-server)
+
 The calculator talks to a small Node.js server over the ESP32's WiFi. The server does the things the ESP32 can't do itself: it asks OpenAI for answers, stores chat messages, serves images and programs, hands out the calculator launcher program, and hosts firmware for wireless updates.
 
 This guide installs it on a small Linux server (tested on Debian 13 with 464 MB of RAM) and keeps it running across reboots. You could run it on any machine the board can reach over WiFi, including a PC on your home network.

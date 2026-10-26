@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - "docs/**"
+      - "esp32/**"
+      - "server/**"
+      - "pcb/**"
+      - "source/prepare8xp.mjs"
+      - "scripts/**"
       - "package.json"
       - ".github/workflows/docs.yml"
   workflow_dispatch:

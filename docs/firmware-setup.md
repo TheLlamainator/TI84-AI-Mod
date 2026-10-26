@@ -1,5 +1,7 @@
 # Flashing the ESP32 and setting up the calculator
 
+> **Files to download:** [firmware files](/downloads#_2-the-esp32-firmware)
+
 You need the hardware built ([wiring](/wiring)) and the server running ([server setup](/server-setup)).
 
 ## 1. Arduino IDE setup
@@ -28,7 +30,7 @@ In the `esp32/` folder, copy `secrets.example.h` to `secrets.h` and fill it in:
 
 ## 3. Board settings and first flash (USB)
 
-The board is a **Seeed Studio XIAO ESP32S3**. For the camera you need the **Sense** version, which has a small camera board attached.
+The board is a **Seeed Studio XIAO ESP32S3**. The camera add-on is **not required**, but it is **recommended**: the **Sense** version has a small camera board attached, and you need it for the CAMERA feature. Everything else works without it.
 
 In **Tools**, choose:
 
@@ -54,9 +56,26 @@ The camera is switched on in the sketch with `#define CAMERA`. If the board has 
 
 The menus run from a program on the calculator called `TI32`. The ESP32 sends it over the link cable.
 
-> **TODO (author):** describe how the first transfer is triggered from the calculator with a fresh board, and which button or program starts it. The firmware's `launcher` command (number 5) is what sends the program, and the log shows `queued transfer` when it works.
+### The first transfer
 
-After that first transfer, updates are done from the calculator itself.
+A fresh board has nothing to send the calculator yet except this one trick. You tell the board the unlock number, then tell it to send the program, using the calculator's `Send(` command by hand.
+
+Before you start, the board must be wired to the calculator and powered.
+
+1. **Store the password in P.** On the home screen, type `69420`, press **STO>**, then the letter **P** (press **ALPHA**, then the key with P above it), then **ENTER**. `69420` is the default `PASSWORD` in `esp32.ino`. If you changed it there, use your number.
+2. **Store 5 in C.** Type `5`, press **STO>**, the letter **C**, then **ENTER**. Command 5 is the one that sends the program.
+3. **Open the catalog:** press **2nd** then **0**.
+4. **Jump to the S entries.** The catalog is already in letter mode, so **don't press ALPHA**. Just press the key with **S** above it, and the list jumps to the entries starting with S.
+5. **Scroll down to `Send(`** and press **ENTER** to paste it on the home screen.
+6. **Send P first.** Finish it as `Send(P)` and press **ENTER**. This unlocks the board.
+7. **Send C.** Do steps 3 to 5 again, finish it as `Send(C)`, and press **ENTER**.
+8. **Press PRGM.** The program `TI32` appears in the list. It can take a few seconds, so if it isn't there at first, wait a moment and open PRGM again.
+
+If `TI32` never appears, check the Serial Monitor. You should see `unlocked: 1`, then `command: 5` and `queued transfer`. If the unlock never happens, check the wiring and the password.
+
+### After the first transfer
+
+Once `TI32` is on the calculator, later updates are done from the calculator itself.
 
 1. Run `TI32` from the PRGM menu.
 2. The board ignores the calculator until it receives an unlock number that matches the `PASSWORD` constant in `esp32.ino`. The bundled program sends it for you. If you write your own program, send it first.

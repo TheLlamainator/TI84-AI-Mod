@@ -12,6 +12,7 @@ Based on the original TI-32 project, which is licensed under the GPL v3. See the
 
 | Step | Page |
 | --- | --- |
+| Downloads (PCB files, firmware, server) | [docs/downloads.md](docs/downloads.md) |
 | Overview and diagrams | [docs/overview.md](docs/overview.md) |
 | 1. Order the PCB | [docs/ordering-the-pcb.md](docs/ordering-the-pcb.md) |
 | 2. Wiring and parts | [docs/wiring.md](docs/wiring.md) |

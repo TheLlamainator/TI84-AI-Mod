@@ -23,7 +23,10 @@ export default withMermaid(
       sidebar: [
         {
           text: 'Start here',
-          items: [{ text: 'Overview', link: '/overview' }],
+          items: [
+            { text: 'Overview', link: '/overview' },
+            { text: 'Downloads', link: '/downloads' },
+          ],
         },
         {
           text: 'Build it',

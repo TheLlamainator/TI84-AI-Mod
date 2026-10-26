@@ -2,3 +2,9 @@
 .VPHero .text .ti {
   color: var(--vp-c-brand-1);
 }
+
+/* Download links in tables */
+a.dl {
+  font-weight: 600;
+  white-space: nowrap;
+}

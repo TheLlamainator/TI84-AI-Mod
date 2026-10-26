@@ -82,6 +82,8 @@ flowchart TB
 
 ## Setting it up
 
+Want the files first? See the [Downloads](/downloads) page.
+
 1. [Order the PCB](/ordering-the-pcb) (all files are in `pcb/jlcpcb/`)
 2. [Build the hardware](/wiring)
 3. [Run the server](/server-setup)

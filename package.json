@@ -3,11 +3,13 @@
   "private": true,
   "description": "Documentation site for the TI84-AI-Mod project (the server has its own package.json in server/)",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "downloads": "node scripts/make-downloads.mjs",
+    "docs:dev": "node scripts/make-downloads.mjs && vitepress dev docs",
+    "docs:build": "node scripts/make-downloads.mjs && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "archiver": "^7.0.1",
     "mermaid": "^11.4.0",
     "vitepress": "^1.5.0",
     "vitepress-plugin-mermaid": "^2.0.17"
