@@ -1,7 +1,7 @@
 {
   "name": "ti84-ai-mod-docs",
   "private": true,
-  "description": "Documentation site for the ti84-Ai-Mod project (the server has its own package.json in server/)",
+  "description": "Documentation site for the TI84-AI-Mod project (the server has its own package.json in server/)",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",

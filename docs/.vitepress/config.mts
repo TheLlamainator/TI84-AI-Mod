@@ -1,17 +1,20 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
-const repo = 'https://github.com/TheLlamainator/ti84-Ai-Mod'
+const repo = 'https://github.com/TheLlamainator/TI84-AI-Mod'
 
 export default withMermaid(
   defineConfig({
-    title: 'ti84-Ai-Mod',
+    title: 'TI-84 AI Mod',
+    titleTemplate: ':title | TI-84 AI Mod',
+    head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/TI84-AI-Mod/favicon.svg' }]],
     description: 'WiFi, GPT chat, a camera and wireless updates for a TI-84 calculator, using an ESP32-S3 and a self-hosted server.',
     // GitHub Pages serves the site from /<repo-name>/
-    base: '/ti84-Ai-Mod/',
+    base: '/TI84-AI-Mod/',
     cleanUrls: true,
     lastUpdated: true,
     themeConfig: {
+      logo: '/favicon.svg',
       nav: [
         { text: 'Guide', link: '/overview' },
         { text: 'Build it', link: '/ordering-the-pcb' },

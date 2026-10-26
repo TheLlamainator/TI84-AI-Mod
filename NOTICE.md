@@ -27,6 +27,10 @@ This repository is a modified version of the **TI-32** project. The original is 
 - **Calculator program** (`esp32/launcher.h`, `server/launcher/launcher.var`): CAMERA added to the main menu in place of EXIT; FIRMWARE added to SETTINGS; a working camera loop.
 - `esp32/secrets.example.h`, `server/.env.example`, `esp32/publish-firmware.sh`, `.gitignore`, this notice, the README and the guides in `docs/`.
 
+## Adapted from iFixit
+
+- The disassembly steps in `docs/wiring.md` are adapted from [TI-84 Plus Disassembly](https://www.ifixit.com/Guide/TI-84+Plus+Disassembly/117983) by martijn muntenaar and 6 other contributors on iFixit, licensed under Creative Commons BY-NC-SA. Changes: text lightly shortened, photos converted to PNG. That section keeps the BY-NC-SA licence; it is not GPL.
+
 ## Third-party software
 
 - **ArTICL** (Arduino TI calculator linking library) by Kerm Martian (Cemetech). Install it separately from its own repository. It is not included here.

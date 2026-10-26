@@ -27,3 +27,6 @@ Thumbs.db
 # Docs site build
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+
+# Raw source photos (converted copies live in docs/public/img)
+diagram/

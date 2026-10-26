@@ -91,11 +91,11 @@ flowchart TB
 
 | Folder | Contents |
 | --- | --- |
-| [`esp32/`](https://github.com/TheLlamainator/ti84-Ai-Mod/tree/main/esp32) | The Arduino sketch, camera pins, the compiled calculator program (`launcher.h`), `secrets.example.h` and `publish-firmware.sh`. |
-| [`server/`](https://github.com/TheLlamainator/ti84-Ai-Mod/tree/main/server) | The Node.js server. |
-| [`pcb/`](https://github.com/TheLlamainator/ti84-Ai-Mod/tree/main/pcb) | KiCad project, gerber files and pictures of the level-shifter board. |
-| [`source/`](https://github.com/TheLlamainator/ti84-Ai-Mod/tree/main/source) | Original tools for converting images and calculator programs, and the original `LAUNCHER.8xp` sources. |
-| [`docs/`](https://github.com/TheLlamainator/ti84-Ai-Mod/tree/main/docs) | Guides, plus the original project's documentation. |
+| [`esp32/`](https://github.com/TheLlamainator/TI84-AI-Mod/tree/main/esp32) | The Arduino sketch, camera pins, the compiled calculator program (`launcher.h`), `secrets.example.h` and `publish-firmware.sh`. |
+| [`server/`](https://github.com/TheLlamainator/TI84-AI-Mod/tree/main/server) | The Node.js server. |
+| [`pcb/`](https://github.com/TheLlamainator/TI84-AI-Mod/tree/main/pcb) | KiCad project, gerber files and pictures of the level-shifter board. |
+| [`source/`](https://github.com/TheLlamainator/TI84-AI-Mod/tree/main/source) | Original tools for converting images and calculator programs, and the original `LAUNCHER.8xp` sources. |
+| [`docs/`](https://github.com/TheLlamainator/TI84-AI-Mod/tree/main/docs) | Guides, plus the original project's documentation. |
 
 ## Your secrets stay out of git
 

@@ -1,6 +1,6 @@
 # Ordering the PCB
 
-The level-shifter board is made and assembled by **JLCPCB**. Everything you need to upload is in [`pcb/jlcpcb/`](https://github.com/TheLlamainator/ti84-Ai-Mod/tree/main/pcb/jlcpcb).
+The level-shifter board is made and assembled by **JLCPCB**. Everything you need to upload is in [`pcb/jlcpcb/`](https://github.com/TheLlamainator/TI84-AI-Mod/tree/main/pcb/jlcpcb).
 
 Order here: **[jlcpcb.com](https://jlcpcb.com/?from=UNWIJQWZMTXVHID)**
 
