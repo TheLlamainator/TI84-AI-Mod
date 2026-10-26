@@ -1,0 +1,4 @@
+/* "TI-84" in the home page heading uses the theme's purple */
+.VPHero .text .ti {
+  color: var(--vp-c-brand-1);
+}

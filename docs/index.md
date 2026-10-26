@@ -1,8 +1,7 @@
 ---
 layout: home
 hero:
-  name: ti84-Ai-Mod
-  text: Give a TI-84 calculator WiFi
+  text: "Give a <span class='ti'>TI-84</span> calculator WiFi"
   tagline: GPT chat, a camera view, a self-hosted server and wireless firmware updates, using an ESP32-S3.
   actions:
     - theme: brand
